@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back"
+    tools:context=".ProfileActivity">
+
+    <ImageView
+        android:id="@+id/navigation_rect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/navigation_rect"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/navigation_rect" />
+
+    <ImageView
+        android:id="@+id/main"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/main"
+        android:onClick="goMain"
+        app:layout_constraintBottom_toBottomOf="@+id/navigation_rect"
+        app:layout_constraintEnd_toStartOf="@+id/news"
+        app:layout_constraintStart_toStartOf="@+id/navigation_rect"
+        app:layout_constraintTop_toTopOf="@+id/navigation_rect"
+        app:srcCompat="@drawable/main" />
+
+    <ImageView
+        android:id="@+id/news"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/catalog"
+        android:onClick="goNews"
+        app:layout_constraintBottom_toBottomOf="@+id/navigation_rect"
+        app:layout_constraintEnd_toEndOf="@+id/navigation_rect"
+        app:layout_constraintStart_toStartOf="@+id/navigation_rect"
+        app:layout_constraintTop_toTopOf="@+id/navigation_rect"
+        app:layout_constraintVertical_bias="0.6"
+        app:srcCompat="@drawable/news" />
+
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/profile"
+        app:layout_constraintBottom_toBottomOf="@+id/navigation_rect"
+        app:layout_constraintEnd_toEndOf="@+id/navigation_rect"
+        app:layout_constraintStart_toEndOf="@+id/news"
+        app:layout_constraintTop_toTopOf="@+id/navigation_rect"
+        app:srcCompat="@drawable/profile" />
+
+    <TextView
+        android:id="@+id/profile_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/profile"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/profile_avatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/profile_avatar_circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_text"
+        app:srcCompat="@drawable/profile_avatar_circle" />
+
+    <ImageView
+        android:id="@+id/profile_rect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/profile_rect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_avatar"
+        app:srcCompat="@drawable/profile_rect"
+        tools:ignore="ImageContrastCheck" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_bold"
+        android:inputType="textPersonName"
+        android:text="@string/profile_name"
+        android:textColor="@color/back"
+        android:textSize="20sp"
+        android:autofillHints="name"
+        android:hint="@string/profile_name_hint"
+        app:layout_constraintEnd_toEndOf="@+id/profile_rect"
+        app:layout_constraintStart_toStartOf="@+id/profile_rect"
+        app:layout_constraintTop_toTopOf="@+id/profile_rect" />
+
+    <TextView
+        android:id="@+id/nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/profile_nickname"
+        android:textColor="@color/back"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/favourite_rect"
+        app:layout_constraintStart_toStartOf="@+id/profile_rect"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <ImageView
+        android:id="@+id/favourite_rect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:contentDescription="@string/profile_favourite_rect"
+        android:onClick="goFavourites"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_rect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.252"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/profile_down_rect" />
+
+    <ImageView
+        android:id="@+id/favourite"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/profile_favourite"
+        android:onClick="goFavourites"
+        app:layout_constraintBottom_toBottomOf="@+id/favourite_rect"
+        app:layout_constraintEnd_toEndOf="@+id/favourite_rect"
+        app:layout_constraintStart_toStartOf="@+id/favourite_rect"
+        app:layout_constraintTop_toTopOf="@+id/favourite_rect"
+        app:srcCompat="@drawable/favourite" />
+
+    <ImageView
+        android:id="@+id/cart_rect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:contentDescription="@string/profile_cart_rect"
+        android:onClick="goCart"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_rect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/profile_down_rect" />
+
+    <ImageView
+        android:id="@+id/cart"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/profile_cart"
+        android:onClick="goCart"
+        app:layout_constraintBottom_toBottomOf="@+id/cart_rect"
+        app:layout_constraintEnd_toEndOf="@+id/cart_rect"
+        app:layout_constraintStart_toStartOf="@+id/cart_rect"
+        app:layout_constraintTop_toTopOf="@+id/cart_rect"
+        app:srcCompat="@drawable/carts" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

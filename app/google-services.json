@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "786255661324",
+    "project_id": "sult-store-1",
+    "storage_bucket": "sult-store-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786255661324:android:5a27af1458de21c1d0e129",
+        "android_client_info": {
+          "package_name": "com.sult.tm.sultstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786255661324-0sj48rfv3e0s9ntkgnaaaj9io5l1lfv1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAA5MgmJzTe5lYoZd9lhT2UYikKKA-OcDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786255661324-0sj48rfv3e0s9ntkgnaaaj9io5l1lfv1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
